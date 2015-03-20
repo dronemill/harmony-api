@@ -1,16 +1,33 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "dronemill/harmony-api",
+	"description": "The DroneMill Harmony Api",
+	"keywords": ["dronemill", "harmony", "api"],
 	"license": "MIT",
 	"type": "project",
+	"minimum-stability": "stable",
 	"require": {
-		"laravel/framework": "5.0.*"
+		"laravel/framework": "5.0.*",
+		"dronemill/foundationapi": "dev-master",
+		"dronemill/phphelpers": "dev-master",
+		"phpseclib/phpseclib": "0.3.9"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
-		"phpspec/phpspec": "~2.1"
+		"phpspec/phpspec": "~2.1",
+		"mockery/mockery": "0.9.1",
+		"league/factory-muffin": "3.0.*@dev",
+		"league/factory-muffin-faker": "~1.0-dev"
 	},
+	"repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:dronemill/foundationapi.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:dronemill/phphelpers.git"
+        }
+	],
 	"autoload": {
 		"classmap": [
 			"database"
@@ -39,6 +56,6 @@
 		]
 	},
 	"config": {
-		"preferred-install": "dist"
+		"preferred-install": "source"
 	}
 }
