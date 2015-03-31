@@ -224,10 +224,10 @@ class Container extends Model {
 	 * @method  host
 	 * @return  Eloquent Relationship
 	 */
-	public function host()
-	{
-		return $this->belongsTo('App\Models\Host', 'host_id', 'id');
-	}
+	// public function host()
+	// {
+	// 	return $this->belongsTo('App\Models\Host', 'host_id', 'id');
+	// }
 
 	/**
 	 * get the volumes this container has
