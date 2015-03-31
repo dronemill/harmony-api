@@ -11,4 +11,11 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+
+/**
+ * Handle default routes, and send them to the documentation
+ */
+Route::any('{docs}', function()
+{
+	return Redirect::to(Config::get('app.docs_url') . '/v1/docs');
+})->where('docs', '(docs|documentation|v1|v1/docs|v1/documentation)?');
