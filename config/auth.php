@@ -15,7 +15,7 @@ return [
 	|
 	*/
 
-	'driver' => 'eloquent',
+	'driver' => 'FoundationApi',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +28,8 @@ return [
 	|
 	*/
 
-	'model' => 'App\User',
+	'model' => '\App\Models\User',
+	'token_model' => '\App\Models\UserToken',
 
 	/*
 	|--------------------------------------------------------------------------

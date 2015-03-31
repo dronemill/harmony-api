@@ -110,6 +110,8 @@ return [
 
 	'providers' => [
 
+		'DroneMill\FoundationApi\Providers\AuthServiceProvider',
+
 		/*
 		 * Laravel Framework Service Providers...
 		 */
@@ -159,6 +161,13 @@ return [
 	*/
 
 	'aliases' => [
+
+		'AuthPermission' => 'DroneMill\FoundationApi\Auth\Permission',
+		'BaseController' => 'App\Http\Controllers\Controller',
+		'FactoryMuffin'  => 'League\FactoryMuffin\FactoryMuffin',
+		'FMaker'         => 'League\FactoryMuffin\Faker\Facade',
+		'Model'          => 'DroneMill\FoundationApi\Database\Model',
+		'Seeder'         => 'DroneMill\FoundationApi\Database\Seeder',
 
 		'App'       => 'Illuminate\Support\Facades\App',
 		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
