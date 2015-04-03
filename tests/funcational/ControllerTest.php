@@ -59,7 +59,7 @@ class Functional_ControllerTest extends TestCase {
 			'{"data":{"type":"container","id":"98263476","cid":"abcdef"}}'
 		);
 
-		$this->assertTrue($response->getStatusCode() === 204);
+		$this->assertTrue($response->isOk());
 
 		$data = $response->getData(true);
 
