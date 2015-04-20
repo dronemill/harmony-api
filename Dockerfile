@@ -17,7 +17,9 @@ MAINTAINER pmccarren
 ENV HOME /root
 
 # Expose the propper port (we will only ever serve over tls)
-EXPOSE 443
+# EXPOSE 443
+# But for now...
+EXPOSE 80
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
