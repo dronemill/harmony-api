@@ -16,6 +16,9 @@ MAINTAINER pmccarren
 # Set correct environment variables.
 ENV HOME /root
 
+# Expose the propper port (we will only ever serve over tls)
+EXPOSE 443
+
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
