@@ -3,7 +3,7 @@
 # http://chapeau.freevariable.com/2014/08/docker-uid.html
 
 # if we don't have a UID to swich to, then get out
-if [ "$EXEC_UID" -eq "" ]; then exit; fi;
+if [ -z "$EXEC_UID" ]; then exit; fi;
 
 export ORIGPASSWD=$(cat /etc/passwd | grep $EXEC_UNAME)
 export ORIG_UID=$(echo $ORIGPASSWD | cut -f3 -d:)

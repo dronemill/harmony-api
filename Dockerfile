@@ -87,7 +87,7 @@ RUN rm -f /etc/php5/fpm/php-fpm.conf && \
 	rm -f /etc/php5/fpm/php.ini
 
 ADD dockerfile_fs/etc/php5/fpm/php-fpm.conf /etc/php5/fpm/php-fpm.conf
-ADD dockerfile_fs/etc/php5/fpm/pool.d/www.conf /etc/php5/fpm/pool.d/www.conf
+ADD dockerfile_fs/etc/php5/fpm/pool.d/api.conf /etc/php5/fpm/pool.d/api.conf
 ADD dockerfile_fs/etc/php5/cli/php.ini /etc/php5/cli/php.ini
 ADD dockerfile_fs/etc/php5/fpm/php.ini /etc/php5/fpm/php.ini
 ADD dockerfile_fs/etc/logrotate.d/php5-fpm /etc/logrotate.d/php5-fpm
