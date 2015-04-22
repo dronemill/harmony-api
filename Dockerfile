@@ -30,6 +30,7 @@ CMD ["/sbin/my_init"]
 # Misc Init
 #
 ADD dockerfile_fs/etc/my_init.d/check_log_structure.sh /etc/my_init.d/check_log_structure.sh
+ADD dockerfile_fs/etc/my_init.d/uid.sh /etc/my_init.d/uid.sh
 
 
 
