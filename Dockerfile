@@ -7,7 +7,7 @@ FROM phusion/baseimage:0.9.16
 
 
 #
-# Misc Config
+# Misc Docker Config
 #
 
 # set the maintainer
@@ -23,14 +23,6 @@ EXPOSE 80
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
-
-
-
-#
-# Misc Init
-#
-ADD dockerfile_fs/etc/my_init.d/check_log_structure.sh /etc/my_init.d/check_log_structure.sh
-ADD dockerfile_fs/etc/my_init.d/uid.sh /etc/my_init.d/uid.sh
 
 
 
@@ -57,6 +49,15 @@ RUN apt-get update && \
 		php5-mcrypt \
 		php5-curl \
 		php5-sqlite
+
+
+
+#
+# Misc Init
+#
+ADD dockerfile_fs/etc/my_init.d/check_log_structure.sh /etc/my_init.d/check_log_structure.sh
+ADD dockerfile_fs/etc/my_init.d/uid.sh /etc/my_init.d/uid.sh
+ADD dockerfile_fs/etc/my_init.d/app_env.sh /etc/my_init.d/app_env.sh
 
 
 
