@@ -46,6 +46,14 @@ class ContainerExpose extends Model {
 	 */
 	protected $with = [];
 
+    /**
+     * The resource type. If null, when the model is rendered,
+     * the table name will be used
+     *
+     * @var  null|string
+     */
+    protected $resourceType = 'container_exposes';
+
 	/**
 	 * Scope Where Container
 	 *

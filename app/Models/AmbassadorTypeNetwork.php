@@ -46,6 +46,14 @@ class AmbassadorTypeNetwork extends Model {
 	 */
 	protected $with = [];
 
+    /**
+     * The resource type. If null, when the model is rendered,
+     * the table name will be used
+     *
+     * @var  null|string
+     */
+    protected $resourceType = 'ambassador_type_networks';
+
 	/**
 	 * Scope Where Ambassador
 	 *

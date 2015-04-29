@@ -48,6 +48,14 @@ class Ambassador extends Model {
 	 */
 	protected $with = [];
 
+    /**
+     * The resource type. If null, when the model is rendered,
+     * the table name will be used
+     *
+     * @var  null|string
+     */
+    protected $resourceType = 'ambassadors';
+
 	/**
 	 * Scope Where Container
 	 *
