@@ -148,9 +148,9 @@ class App_Models_ContainerTest extends TestCase {
 	{
 		$container = parent::$factoryMuffin->create('App\Models\Container');
 
-		$find = Container::whereHost($container->host_id)->first();
+		$find = Container::whereMachine($container->machine_id)->first();
 
 		$this->assertInstanceOf('App\Models\Container', $find);
-		$this->assertEquals($find->host_id, $container->host_id);
+		$this->assertEquals($find->machine_id, $container->machine_id);
 	}
 }

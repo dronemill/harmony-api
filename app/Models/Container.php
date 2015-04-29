@@ -59,27 +59,16 @@ class Container extends Model {
 	}
 
 	/**
-	 * Scope Where hostId
+	 * Scope Where machineId
 	 *
-	 * @method  scopeWhereHostId
-	 * @param   string      $hostId
+	 * @method  scopeWhereMachineId
+	 * @param   string      $machineId
 	 * @return  Illuminate\Database\Query\Builder
 	 */
-	public function scopeWhereHost($query, $hostId)
+	public function scopeWhereMachine($query, $machineId)
 	{
-		return $query->where('host_id', '=', $hostId);
+		return $query->where('machine_id', '=', $machineId);
 	}
-
-	/**
-	 * fetch the host that this container belongs on
-	 *
-	 * @method  host
-	 * @return  Eloquent Relationship
-	 */
-	// public function host()
-	// {
-	// 	return $this->belongsTo('App\Models\Host', 'host_id', 'id');
-	// }
 
 	/**
 	 * get the volumes this container has

@@ -17,7 +17,7 @@ class InitialMigration extends Migration {
 			$table->engine = 'InnoDB';
 
 			$table->bigInteger('id')->unsigned();
-			$table->bigInteger('host_id')->unsigned();
+			$table->bigInteger('machine_id')->unsigned();
 			$table->string('cid'        , 64)->nullable()->default(null);
 			$table->string('name'       , 30);
 			$table->string('hostname'   , 64);
@@ -31,7 +31,7 @@ class InitialMigration extends Migration {
 			$table->unique('cid');
 			$table->unique('name');
 			$table->unique('hostname');
-			$table->index(['host_id', 'enabled'], 'harmony_host_index');
+			$table->index(['machine_id', 'enabled'], 'harmony_host_index');
 		});
 
 		Schema::connection('harmony')->create('container_volume', function(Blueprint $table)
