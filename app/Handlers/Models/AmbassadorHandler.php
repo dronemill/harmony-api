@@ -7,7 +7,7 @@ use App\Models\Ambassador;
 
 use EchoIt\JsonApi\Exception as ApiException;
 use EchoIt\JsonApi\Request as ApiRequest;
-use EchoIt\JsonApi\Handler as ApiHandler;
+use DroneMill\FoundationApi\Handlers\Api as ApiHandler;
 use Request;
 
 /**
@@ -20,7 +20,13 @@ class AmbassadorHandler extends ApiHandler
 	/**
 	 * List of relations that can be included in response.
 	 */
-	protected static $exposedRelations = [];
+	protected static $exposedRelations = [
+		'container',
+		'producer_container',
+		'consumer_of_ambassador',
+		'consumers',
+		'ambassador_type_network',
+	];
 
 	/**
 		* Handles GET requests.

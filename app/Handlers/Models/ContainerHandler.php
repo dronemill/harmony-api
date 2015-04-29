@@ -7,7 +7,7 @@ use App\Models\Container;
 
 use EchoIt\JsonApi\Exception as ApiException;
 use EchoIt\JsonApi\Request as ApiRequest;
-use EchoIt\JsonApi\Handler as ApiHandler;
+use DroneMill\FoundationApi\Handlers\Api as ApiHandler;
 use Request;
 
 /**
@@ -20,7 +20,17 @@ class ContainerHandler extends ApiHandler
 	/**
 	 * List of relations that can be included in response.
 	 */
-	protected static $exposedRelations = [];
+	protected static $exposedRelations = [
+		'container_envs',
+		'container_volumes',
+		'container_nics',
+		'container_dns',
+		'container_exposes',
+		'container_links',
+		'container_publishs',
+		'ambassador',
+		'producer_container',
+	];
 
 	/**
 		* Handles GET requests.

@@ -32,56 +32,6 @@ class ContainerVolume extends Model {
 	public $timestamps = false;
 
 	/**
-	 * ResponseDocument references
-	 *
-	 * @var  Array
-	 */
-	public $jsonView = [
-		'type' => 'container_volume',
-		'attributes' => [
-			'id' => [
-				'type' => self::JSONVIEW_ATTRIBUTE_TYPE_ATTRIBUTE,
-				'permission' => [
-					'read' => [AuthPermission::PERMISSION_OPS_ALLOW, AuthPermission::PERMISSION_HOST_ALLOW],
-					'modify' => [],
-				],
-			],
-			'container' => [
-				'type' => self::JSONVIEW_ATTRIBUTE_TYPE_MODEL,
-				'lazyLoad' => true,
-				'permission' => [
-					'read' => [AuthPermission::PERMISSION_OPS_ALLOW, AuthPermission::PERMISSION_HOST_ALLOW],
-					'modify' => [],
-				],
-			],
-			'path_host' => [
-				'type' => self::JSONVIEW_ATTRIBUTE_TYPE_ATTRIBUTE,
-				'datatype' => 'string',
-				'permission' => [
-					'read' => [AuthPermission::PERMISSION_ALL_ALLOW, AuthPermission::PERMISSION_USER_DENY, ],
-					'modify' => [],
-				],
-			],
-			'path_container' => [
-				'type' => self::JSONVIEW_ATTRIBUTE_TYPE_ATTRIBUTE,
-				'datatype' => 'string',
-				'permission' => [
-					'read' => [AuthPermission::PERMISSION_OPS_ALLOW, AuthPermission::PERMISSION_HOST_ALLOW],
-					'modify' => [],
-				],
-			],
-			'container' => [
-				'type' => self::JSONVIEW_ATTRIBUTE_TYPE_MODEL,
-				'lazyLoad' => true,
-				'permission' => [
-					'read' => [AuthPermission::PERMISSION_OPS_ALLOW, AuthPermission::PERMISSION_HOST_ALLOW],
-					'modify' => [],
-				],
-			],
-		],
-	];
-
-	/**
 	 * primary key is not auto-incrementing
 	 *
 	 * @var  boolean
