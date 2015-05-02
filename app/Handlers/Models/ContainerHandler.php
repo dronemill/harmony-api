@@ -18,6 +18,13 @@ class ContainerHandler extends ApiHandler
 	const ERROR_SCOPE = 1024;
 
 	/**
+	 * The model that this handler handles
+	 *
+	 * @var  string
+	 */
+	protected $model = 'App\Models\Container';
+
+	/**
 	 * List of relations that can be included in response.
 	 */
 	protected static $exposedRelations = [

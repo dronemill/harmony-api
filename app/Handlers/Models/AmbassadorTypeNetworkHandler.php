@@ -18,6 +18,13 @@ class AmbassadorTypeNetworkHandler extends ApiHandler
 	const ERROR_SCOPE = 1026;
 
 	/**
+	 * The model that this handler handles
+	 *
+	 * @var  string
+	 */
+	protected $model = 'App\Models\AmbassadorTypeNetwork';
+
+	/**
 	 * List of relations that can be included in response.
 	 */
 	protected static $exposedRelations = [

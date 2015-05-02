@@ -18,6 +18,13 @@ class ContainerLinkHandler extends ApiHandler
 	const ERROR_SCOPE = 1030;
 
 	/**
+	 * The model that this handler handles
+	 *
+	 * @var  string
+	 */
+	protected $model = 'App\Models\ContainerLink';
+
+	/**
 	 * List of relations that can be included in response.
 	 */
 	protected static $exposedRelations = [
