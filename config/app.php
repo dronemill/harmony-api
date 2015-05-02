@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => 'http://harmony.local',
+	'url' => 'http://harmony.dev',
 	'docs_url'    => env('APP_DOCS_URL', 'https://harmony.dronemill.com'),
 
 	/*
