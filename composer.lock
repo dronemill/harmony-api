@@ -228,12 +228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dronemill/foundationapi.git",
-                "reference": "a14f5503e1063b2bc9cf7f2849a2aa83290acead"
+                "reference": "227bcabd2ba66caf7daaed8fdecef76ce84ab3ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dronemill/foundationapi/zipball/a14f5503e1063b2bc9cf7f2849a2aa83290acead",
-                "reference": "a14f5503e1063b2bc9cf7f2849a2aa83290acead",
+                "url": "https://api.github.com/repos/dronemill/foundationapi/zipball/227bcabd2ba66caf7daaed8fdecef76ce84ab3ab",
+                "reference": "227bcabd2ba66caf7daaed8fdecef76ce84ab3ab",
                 "shasum": ""
             },
             "require": {
@@ -270,7 +270,7 @@
                 "source": "https://github.com/dronemill/foundationapi/tree/master",
                 "issues": "https://github.com/dronemill/foundationapi/issues"
             },
-            "time": "2015-04-29 01:59:03"
+            "time": "2015-05-03 03:44:52"
         },
         {
             "name": "dronemill/phphelpers",
@@ -313,12 +313,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dronemill/laravel-jsonapi.git",
-                "reference": "5ec0caaad493f2e86d58d0466e9e2f70e0ae1c30"
+                "reference": "1c4267214c0921d5c4291bc5b6776b9e06575653"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dronemill/laravel-jsonapi/zipball/5ec0caaad493f2e86d58d0466e9e2f70e0ae1c30",
-                "reference": "5ec0caaad493f2e86d58d0466e9e2f70e0ae1c30",
+                "url": "https://api.github.com/repos/dronemill/laravel-jsonapi/zipball/1c4267214c0921d5c4291bc5b6776b9e06575653",
+                "reference": "1c4267214c0921d5c4291bc5b6776b9e06575653",
                 "shasum": ""
             },
             "require": {
@@ -351,9 +351,9 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/dronemill/laravel-jsonapi/tree/linkedRenaming"
+                "source": "https://github.com/dronemill/laravel-jsonapi/tree/downstream"
             },
-            "time": "2015-04-29 01:46:04"
+            "time": "2015-04-29 22:51:27"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -916,16 +916,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v1.2.2",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "08f97eb4efa029e2fafb6d8c98b71731bf0cf621"
+                "reference": "dff239267fd1befa1cd40430c9ed12591aa720ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/08f97eb4efa029e2fafb6d8c98b71731bf0cf621",
-                "reference": "08f97eb4efa029e2fafb6d8c98b71731bf0cf621",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dff239267fd1befa1cd40430c9ed12591aa720ca",
+                "reference": "dff239267fd1befa1cd40430c9ed12591aa720ca",
                 "shasum": ""
             },
             "require": {
@@ -935,7 +935,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.3-dev"
                 }
             },
             "autoload": {
@@ -957,7 +957,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2015-04-03 14:33:59"
+            "time": "2015-05-02 15:40:40"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -2738,16 +2738,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.6.4",
+            "version": "4.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "163232991e652e6efed2f8470326fffa61e848e2"
+                "reference": "3afe303d873a4d64c62ef84de491b97b006fbdac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/163232991e652e6efed2f8470326fffa61e848e2",
-                "reference": "163232991e652e6efed2f8470326fffa61e848e2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3afe303d873a4d64c62ef84de491b97b006fbdac",
+                "reference": "3afe303d873a4d64c62ef84de491b97b006fbdac",
                 "shasum": ""
             },
             "require": {
@@ -2806,7 +2806,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-04-11 05:23:21"
+            "time": "2015-04-29 15:18:52"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
