@@ -10,7 +10,7 @@ class ContainerNicSeeder extends Seeder {
 
 		ContainerNic::create(array(
 			'id'            => 12768523,
-			'container_id'  => 98263476,
+			'container_id'  => '16461407840577296064',
 			'bridge_dev'    => 'em1',
 			'container_dev' => 'eth1',
 			'ip'            => '169.254.1.10',

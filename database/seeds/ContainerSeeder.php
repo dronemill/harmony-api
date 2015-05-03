@@ -9,7 +9,7 @@ class ContainerSeeder extends Seeder {
 		$this->SmartTruncate('App\Models\Container');
 
 		Container::create(array(
-			'id'         => 98263476,
+			'id'         => '16461407840577296064',
 			'machine_id' => 1,
 			'name'       => 'super_awesome_container',
 			'hostname'   => 'super_awesome_container',
