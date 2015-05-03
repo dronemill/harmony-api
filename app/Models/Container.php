@@ -48,6 +48,11 @@ class Container extends Model {
 	 */
 	protected $with = [];
 
+	/**
+	 * Define which attributes are fillable
+	 */
+	protected $fillable = ['machine_id', 'name', 'hostname', 'restart', 'image', 'entry_point'];
+
     /**
      * The resource type. If null, when the model is rendered,
      * the table name will be used
