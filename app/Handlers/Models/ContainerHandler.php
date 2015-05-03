@@ -40,9 +40,9 @@ class ContainerHandler extends ApiHandler
 	];
 
 	/**
-		* Handles GET requests.
-		* @param EchoIt\JsonApi\Request $request
-		* @return EchoIt\JsonApi\Model|Illuminate\Support\Collection|EchoIt\JsonApi\Response|Illuminate\Pagination\LengthAwarePaginator
+	 * Handles GET requests.
+	 * @param EchoIt\JsonApi\Request $request
+	 * @return EchoIt\JsonApi\Model|Illuminate\Support\Collection|EchoIt\JsonApi\Response|Illuminate\Pagination\LengthAwarePaginator
 	 */
 	public function handleGet(ApiRequest $request)
 	{
