@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Collection;
 use DroneMill\FoundationApi\Auth\Permission as AuthPermission;
 use DroneMill\FoundationApi\Database\Model;
+use DroneMill\Helpers\Integer\Misc as IntegerHelper;
+use Log;
 
 class Container extends Model {
 
@@ -53,6 +55,27 @@ class Container extends Model {
      * @var  null|string
      */
     protected $resourceType = 'containers';
+
+	/**
+	* Handle Model Boot
+	*/
+	public static function boot()
+	{
+		Log::debug('Booting Container model');
+
+		parent::boot();
+
+		static::creating(function($container)
+		{
+			if (empty($container->id))
+			{
+				Log::debug('Creating container without id');
+				// FIXME: duplicate check
+				$container->id = IntegerHelper::rand64();
+				Log::info('Generated container id', ['container_id' => $container->id]);
+			}
+		});
+	}
 
 	/**
 	 * Scope Where name
