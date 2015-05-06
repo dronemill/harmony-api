@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder {
 			throw new Exception("UNSAFE: attempting to seed non testing, non local database!");
 		}
 
+		$this->call('MachineSeeder');
 		$this->call('ContainerSeeder');
 		$this->call('ContainerVolumeSeeder');
 		$this->call('ContainerEnvSeeder');

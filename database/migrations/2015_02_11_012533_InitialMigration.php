@@ -1,5 +1,6 @@
 <?php
 
+// use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -12,6 +13,20 @@ class InitialMigration extends Migration {
 	 */
 	public function up()
 	{
+		Schema::connection('harmony')->create('machine', function(Blueprint $table)
+		{
+			$table->engine = 'InnoDB';
+
+			$table->bigInteger('id')->unsigned();
+			$table->string('name', 32);
+			$table->string('hostname', 64);
+			$table->string('ip', 16);
+			$table->timestamps();
+
+			$table->primary('id');
+			$table->unique('name');
+		});
+
 		Schema::connection('harmony')->create('container', function(Blueprint $table)
 		{
 			$table->engine = 'InnoDB';
@@ -101,6 +116,7 @@ class InitialMigration extends Migration {
 		Schema::connection('harmony')->drop('container_env');
 		Schema::connection('harmony')->drop('container_volume');
 		Schema::connection('harmony')->drop('container');
+		Schema::connection('harmony')->drop('machine');
 	}
 
 }

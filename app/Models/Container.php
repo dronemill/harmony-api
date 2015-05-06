@@ -195,4 +195,14 @@ class Container extends Model {
 	{
 		return $this->hasOne('App\Models\Ambassador', 'producer_container_id', 'id');
 	}
+
+	/**
+	 * get the machine that this container belongs to
+	 *
+	 * @return  collection
+	 */
+	public function machine()
+	{
+		return $this->belongsTo('App\Models\Machine', 'machine_id', 'id');
+	}
 }

@@ -3,7 +3,7 @@
 namespace App\Handlers\Models;
 
 // use Symfony\Component\HttpFoundation\Response;
-use App\Models\Container;
+use App\Models\Machine;
 
 use EchoIt\JsonApi\Exception as ApiException;
 use EchoIt\JsonApi\Request as ApiRequest;
@@ -11,44 +11,35 @@ use DroneMill\FoundationApi\Handlers\Api as ApiHandler;
 use Request;
 
 /**
-* Handles API requests for Container
+* Handles API requests for Machine
 */
-class ContainerHandler extends ApiHandler
+class MachineHandler extends ApiHandler
 {
-	const ERROR_SCOPE = 1024;
+	const ERROR_SCOPE = 1027;
 
 	/**
 	 * The model that this handler handles
 	 *
 	 * @var  string
 	 */
-	protected $model = 'App\Models\Container';
+	protected $model = 'App\Models\Machine';
 
 	/**
 	 * List of relations that can be included in response.
 	 */
 	protected static $exposedRelations = [
-		'container_envs',
-		'container_volumes',
-		'container_nics',
-		'container_dns',
-		'container_exposes',
-		'container_links',
-		'container_publishs',
-		'ambassador',
-		'producer_container',
-		'machine',
+		'containers',
 	];
 
 	/**
-	 * Handles GET requests.
-	 * @param EchoIt\JsonApi\Request $request
-	 * @return EchoIt\JsonApi\Model|Illuminate\Support\Collection|EchoIt\JsonApi\Response|Illuminate\Pagination\LengthAwarePaginator
+		* Handles GET requests.
+		* @param EchoIt\JsonApi\Request $request
+		* @return EchoIt\JsonApi\Model|Illuminate\Support\Collection|EchoIt\JsonApi\Response|Illuminate\Pagination\LengthAwarePaginator
 	 */
 	public function handleGet(ApiRequest $request)
 	{
 		//you can use the default GET functionality, or override with your own
-		return $this->handleGetDefault($request, new Container);
+		return $this->handleGetDefault($request, new Machine);
 	}
 
 	/**
@@ -59,6 +50,6 @@ class ContainerHandler extends ApiHandler
 	public function handlePut(ApiRequest $request)
 	{
 		//you can use the default PUT functionality, or override with your own
-		return $this->handlePutDefault($request, new Container);
+		return $this->handlePutDefault($request, new Machine);
 	}
 }
