@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Collection;
 use DroneMill\FoundationApi\Auth\Permission as AuthPermission;
 use DroneMill\FoundationApi\Database\Model;
+use DroneMill\Helpers\Integer\Misc as IntegerHelper;
+use Illuminate\Database\Eloquent\Collection;
+use Log;
 
 class Machine extends Model {
 
