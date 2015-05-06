@@ -24,6 +24,10 @@ EXPOSE 80
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
+# we want to enter the container at the api
+ENTRYPOINT /usr/share/nginx/api
+
+
 
 
 #
