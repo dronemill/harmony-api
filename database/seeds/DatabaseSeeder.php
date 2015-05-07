@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('ContainerEnvSeeder');
 		$this->call('ContainerNicSeeder');
 		$this->call('ContainerDnsSeeder');
+		$this->call('ContainerExposeSeeder');
+		$this->call('ContainerPublishSeeder');
 	}
 
 }
