@@ -11,7 +11,7 @@ class ContainerVolumeSeeder extends Seeder {
 		ContainerVolume::create(array(
 			'id'             => 23478983,
 			'container_id'   => '16461407840577296064',
-			'path_host'      => '//tmp/volume',
+			'path_host'      => '/tmp/volume',
 			'path_container' => '/tmp/volume_epgNxFOydfwtIYkzPnlKTVskzy', // yep some random text
 		));
 	}
