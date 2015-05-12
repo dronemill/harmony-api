@@ -163,6 +163,7 @@ return [
 
 	'aliases' => [
 
+		'ApiController'  => 'App\Http\Controllers\ApiController',
 		'AuthPermission' => 'DroneMill\FoundationApi\Auth\Permission',
 		'BaseController' => 'App\Http\Controllers\Controller',
 		'FactoryMuffin'  => 'League\FactoryMuffin\FactoryMuffin',

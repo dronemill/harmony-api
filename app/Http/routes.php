@@ -27,7 +27,7 @@ Route::group(['prefix' => 'v1'], function()
 	// Route::group(['middleware' => 'auth'], function()
 	// {
 		// handle an api request
-		Route::any('/{model}/{id?}', '\DroneMill\FoundationApi\Http\Controllers\ApiController@handleRequest');
+		Route::any('/{model}/{id?}', 'ApiController@handleRequest');
 	// });
 
 
