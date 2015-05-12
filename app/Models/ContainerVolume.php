@@ -52,7 +52,7 @@ class ContainerVolume extends Model {
      *
      * @var  null|string
      */
-    protected $resourceType = 'container_volumes';
+    protected $resourceType = 'containerVolumes';
 
 	/**
 	 * Scope Where Container

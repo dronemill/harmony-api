@@ -52,7 +52,7 @@ class ContainerLink extends Model {
      *
      * @var  null|string
      */
-    protected $resourceType = 'container_links';
+    protected $resourceType = 'containerLinks';
 
 	/**
 	 * Scope Where Container

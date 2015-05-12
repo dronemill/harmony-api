@@ -52,7 +52,7 @@ class ContainerPublish extends Model {
      *
      * @var  null|string
      */
-    protected $resourceType = 'container_publishs';
+    protected $resourceType = 'containerPublishs';
 
 	/**
 	 * Scope Where Container

@@ -52,7 +52,7 @@ class ContainerEnv extends Model {
      *
      * @var  null|string
      */
-    protected $resourceType = 'container_envs';
+    protected $resourceType = 'containerEnvs';
 
 	/**
 	 * Scope Where Container

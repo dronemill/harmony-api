@@ -52,7 +52,7 @@ class ContainerDns extends Model {
      *
      * @var  null|string
      */
-    protected $resourceType = 'container_dns';
+    protected $resourceType = 'containerDns';
 
 	/**
 	 * Scope Where Container

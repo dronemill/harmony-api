@@ -52,7 +52,7 @@ class ContainerNic extends Model {
      *
      * @var  null|string
      */
-    protected $resourceType = 'container_nics';
+    protected $resourceType = 'containerNics';
 
 	/**
 	 * Scope Where Container

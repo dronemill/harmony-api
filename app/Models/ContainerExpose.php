@@ -52,7 +52,7 @@ class ContainerExpose extends Model {
      *
      * @var  null|string
      */
-    protected $resourceType = 'container_exposes';
+    protected $resourceType = 'containerExposes';
 
 	/**
 	 * Scope Where Container
