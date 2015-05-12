@@ -38,7 +38,10 @@ class InitialMigration extends Migration {
 			$table->string('hostname'   , 64);
 			$table->string('restart'    , 16)->nullable()->default(null);
 			$table->string('image'      , 128);
-			$table->string('entry_point', 128)->default('/sbin/my_init');
+			$table->string('cmd'        , 128)->nullable()->default(null);
+			$table->string('entry_point', 128)->nullable()->default(null);
+			$table->boolean('interactive')->default(false);
+			$table->boolean('tty')->default(false);
 			$table->boolean('enabled')->default(false);
 			$table->timestamps();
 
