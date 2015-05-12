@@ -16,7 +16,9 @@ class ContainerSeeder extends Seeder {
 			// 'restart'  => 'on-failure:3',
 			'image'       => 'ubuntu',
 			'enabled'     => 1,
-			'entry_point' => '/usr/bin/top'
+			'cmd'         => '/usr/bin/env top',
+			'tty'         => true,
+			'interactive' => true,
 		));
 	}
 
