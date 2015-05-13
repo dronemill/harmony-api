@@ -21,6 +21,7 @@ class InitialMigration extends Migration {
 			$table->string('name', 32);
 			$table->string('hostname', 64);
 			$table->string('ip', 16);
+			$table->string('es_client_id', 36)->nullable()->defualt(null);
 			$table->timestamps();
 
 			$table->primary('id');

@@ -51,7 +51,7 @@ class Machine extends Model {
 	/**
 	 * Define which attributes are fillable
 	 */
-	protected $fillable = ['name', 'hostname', 'ip'];
+	protected $fillable = ['name', 'hostname', 'ip', 'es_client_id'];
 
 
     /**
