@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Collection;
 use DroneMill\FoundationApi\Auth\Permission as AuthPermission;
 use DroneMill\FoundationApi\Database\Model;
 use DroneMill\Helpers\Integer\Misc as IntegerHelper;
+use App\Commands\PushBatondUpdatedContainer;
+use Bus;
 use Log;
 
 class Container extends Model {
@@ -91,6 +93,15 @@ class Container extends Model {
 				$container->id = IntegerHelper::rand64();
 				Log::info('Generated container id', ['container_id' => $container->id]);
 			}
+
+		});
+
+		static::saved(function($container)
+		{
+			Log::debug('handling saved container', ['container_id' => $container->id]);
+			Bus::dispatch(
+				new PushBatondUpdatedContainer($container)
+			);
 		});
 	}
 
