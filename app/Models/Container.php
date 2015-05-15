@@ -53,7 +53,7 @@ class Container extends Model {
 	/**
 	 * Define which attributes are fillable
 	 */
-	protected $fillable = ['machine_id', 'name', 'hostname', 'restart', 'image', 'entry_point', 'cid', 'interactive', 'tty'];
+	protected $fillable = ['machine_id', 'name', 'hostname', 'restart', 'image', 'entry_point', 'cid', 'interactive', 'tty', 'enabled'];
 
 	/**
 	 * The attributes that should be casted to native types.
