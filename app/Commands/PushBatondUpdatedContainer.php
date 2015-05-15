@@ -28,10 +28,13 @@ class PushBatondUpdatedContainer extends Command implements SelfHandling {
 	 */
 	public function handle()
 	{
-		$harmony = new Client(Config::get('harmony.portal.url'));
-		$harmony->emit('batond-container-updated', ['ContainerID' => $this->container->id]);
+		$machineID = $this->container->machine()->first()->id;
+		$event = 'harmony.machine-'. $machineID . '.batond-container-updated';
 
-		Log::info('Emitted Portal event', ['event' => 'batond-container-updated', 'container_id' => $this->container->id]);
+		$harmony = new Client(Config::get('harmony.portal.url'));
+		$harmony->emit($event, ['ContainerID' => $this->container->id]);
+
+		Log::info('Emitted Portal event', ['event' => $event, 'container_id' => $this->container->id]);
 	}
 
 }
