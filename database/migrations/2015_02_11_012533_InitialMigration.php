@@ -35,7 +35,7 @@ class InitialMigration extends Migration {
 			$table->bigInteger('id')->unsigned();
 			$table->bigInteger('machine_id')->unsigned()->nullable()->default(null);
 			$table->string('cid'        , 64)->nullable()->default(null);
-			$table->string('name'       , 30);
+			$table->string('name'       , 64);
 			$table->string('hostname'   , 64);
 			$table->string('restart'    , 16)->nullable()->default(null);
 			$table->string('image'      , 128);
