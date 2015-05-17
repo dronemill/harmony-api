@@ -33,7 +33,7 @@ class InitialMigration extends Migration {
 			$table->engine = 'InnoDB';
 
 			$table->bigInteger('id')->unsigned();
-			$table->bigInteger('machine_id')->unsigned();
+			$table->bigInteger('machine_id')->unsigned()->nullable()->default(null);
 			$table->string('cid'        , 64)->nullable()->default(null);
 			$table->string('name'       , 30);
 			$table->string('hostname'   , 64);
