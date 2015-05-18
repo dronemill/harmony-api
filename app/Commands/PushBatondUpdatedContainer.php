@@ -1,5 +1,6 @@
 <?php namespace App\Commands;
 
+use App;
 use App\Commands\Command;
 use App\Models\Container;
 use DroneMill\EventsocketClient\Client;
@@ -28,8 +29,26 @@ class PushBatondUpdatedContainer extends Command implements SelfHandling {
 	 */
 	public function handle()
 	{
-		$machineID = $this->container->machine()->first()->id;
-		$event = 'harmony.machine-'. $machineID . '.batond-container-updated';
+		// if we are running unit tests, then don't sent a push noticifation
+		if (App::environment('testing'))
+		{
+			return;
+		}
+
+		$machine = $this->container->machine()->first();
+
+		// if we dont have a machine record, then abort push
+		if (empty($machine))
+		{
+			Log::error('Aborting Portal event push becuase machine not found', [
+				'container_id' => $this->container->id,
+				'event'        => 'batond-container-updated',
+			]);
+
+			return;
+		}
+
+		$event = 'harmony.machine-'. $machine->id . '.batond-container-updated';
 
 		$harmony = new Client(Config::get('harmony.portal.url'));
 		$harmony->emit($event, ['ContainerID' => $this->container->id]);
