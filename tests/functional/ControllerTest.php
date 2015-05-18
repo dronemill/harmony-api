@@ -29,7 +29,7 @@ class Functional_ControllerTest extends TestCase {
 
 		$response = $this->call(
 			'GET',
-			'/v1/containers/16461407840577296064',
+			'/v1/containers/164614078405772',
 			$paramaters = [],
 			$cookies = [],
 			$files = [],
@@ -39,16 +39,16 @@ class Functional_ControllerTest extends TestCase {
 		$data = $response->getData(true);
 
 		$this->assertTrue($response->isOk());
-		$this->assertCount(1, $data['data']);
+		$this->assertCount(16, $data['data']); // 16 total properties
 	}
 
-	public function test_host_containersPatch()
+	public function test_host_containersPut()
 	{
 		$this->seed();
 
 		$response = $this->call(
 			'PUT',
-			'/v1/containers/16461407840577296064',
+			'/v1/containers/164614078405772',
 			$paramaters = [],
 			$cookies = [],
 			$files = [],
@@ -56,14 +56,14 @@ class Functional_ControllerTest extends TestCase {
 				'CONTENT_TYPE' => 'application/json',
 				'ACCEPT' => 'application/json',
 			],
-			'{"data":{"type":"container","id":"16461407840577296064","cid":"abcdef"}}'
+			'{"data":{"type":"containers","id":"164614078405772","cid":"abcdef"}}'
 		);
 
 		$this->assertTrue($response->isOk());
 
 		$data = $response->getData(true);
 
-		$this->assertSame("16461407840577296064", $data['data']['id']);
+		$this->assertSame("164614078405772", $data['data']['id']);
 		$this->assertSame("abcdef", $data['data']['cid']);
 	}
 
