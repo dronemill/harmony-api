@@ -31,7 +31,7 @@ class Container extends Model {
 	 *
 	 * @var array
 	 */
-	protected $hidden = array();
+	protected $hidden = [];
 
 	public $timestamps = true;
 
